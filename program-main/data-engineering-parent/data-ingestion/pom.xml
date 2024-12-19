@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.example.dataengineering</groupId>
+        <artifactId>data-engineering-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- Points to parent POM -->
+    </parent>
+
+    <artifactId>data-ingestion</artifactId>
+    <dependencies>
+        <!-- Add specific ingestion-related dependencies -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+<dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+        <scope>test</scope>
+    </dependency>
+<dependency>
+        <groupId>com.example.dataengineering</groupId>
+        <artifactId>data-transformation</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>com.example.dataengineering</groupId>
+        <artifactId>data-storage</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>com.example.dataengineering</groupId>
+        <artifactId>data-analytics</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+        <!-- Add other ingestion-related dependencies -->
+    </dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.4.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <mainClass>com.example.Main</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+</project>
