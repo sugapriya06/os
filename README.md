@@ -2,6 +2,7 @@
 mvn exec:java -Dexec.mainClass="com.example.App"
 mvn archetype:generate -DgroupId=com.example -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 cd my-app
+git init
 echo "target/">.gitignore
 echo "idea/">>.gitignore
 echo "*.iml/">>.gitignore
