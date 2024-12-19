@@ -54,3 +54,13 @@ pipeline {     agent any     environment {
         } 
     } 
 }
+package com.Ost;
+import org.junit.Test;
+import static junit. framework.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+public class AppTest { new*
+@Test new*
+public void testHelloWorldOutput() {
+assertEquals(axpected: "Hello, World!", actual: "Hello, World!"); 
+}
+}
